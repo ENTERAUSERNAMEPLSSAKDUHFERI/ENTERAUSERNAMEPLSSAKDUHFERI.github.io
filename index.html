@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ro'eh - Red Team Analyst</title>
+    <title>Sarah Modi - Red Team Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -82,14 +82,14 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
 
         nav a {
             color: var(--text);
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: 1px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -153,9 +153,10 @@
 
         .brand-name {
             font-family: 'Orbitron', sans-serif;
-            font-size: 7rem;
+            font-size: 6rem;
             font-weight: 900;
             background: linear-gradient(135deg, #e8e8e8 0%, #00d4ff 50%, #707070 100%);
+            background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -171,7 +172,7 @@
         }
 
         .brand-name::after {
-            content: 'RO\'EH';
+            content: 'SARAH MODI';
             position: absolute;
             left: 0;
             top: 0;
@@ -268,6 +269,7 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 3.5rem;
             background: linear-gradient(135deg, var(--chrome) 0%, var(--primary) 50%, var(--steel) 100%);
+            background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -356,7 +358,7 @@
             font-size: 1rem;
             color: var(--text);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .terminal-line::before {
@@ -364,12 +366,13 @@
             color: var(--primary);
             margin-right: 10px;
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 3rem;
             margin-top: 4rem;
         }
@@ -494,97 +497,38 @@
             transform: translateX(5px);
         }
 
-        /* Ongoing Work Section */
-        .ongoing-grid {
+        /* Skills Section */
+        .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 5rem;
             margin-top: 4rem;
         }
 
-        .ongoing-box {
+        .skills-category {
             background: rgba(255, 255, 255, 0.02);
-            border-left: 4px solid var(--primary);
-            padding: 3rem;
-            border-radius: 15px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.15);
+            border-radius: 20px;
+            padding: 3rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
 
-        .ongoing-box h3 {
+        .skills-category h3 {
             font-family: 'Orbitron', sans-serif;
             color: var(--primary);
-            margin-bottom: 2rem;
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .ongoing-item {
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            background: rgba(0, 212, 255, 0.05);
-            border-radius: 12px;
-            border: 1px solid rgba(0, 212, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ongoing-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 3px;
-            background: var(--primary);
-            transform: scaleY(0);
-            transition: transform 0.4s ease;
-        }
-
-        .ongoing-item:hover {
-            background: rgba(0, 212, 255, 0.1);
-            transform: translateX(15px);
-            box-shadow: 0 8px 24px rgba(0, 212, 255, 0.2);
-        }
-
-        .ongoing-item:hover::before {
-            transform: scaleY(1);
-        }
-
-        .ongoing-item h4 {
-            color: var(--chrome);
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .ongoing-item p {
-            color: var(--text-dim);
-            line-height: 1.7;
-        }
-
-        .status {
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-style: italic;
-            font-weight: 600;
-            margin-top: 0.8rem;
-        }
-
-        /* Skills Section */
-        .skills-container {
-            position: relative;
-            padding: 3rem 0;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            letter-spacing: 2px;
+            text-align: center;
         }
 
         .skill-item {
             display: flex;
             align-items: center;
-            margin: 3rem 0;
+            margin: 2.5rem 0;
             opacity: 0;
-            transform: translateX(-50px);
+            transform: translateX(-30px);
             animation: slideIn 0.8s ease forwards;
         }
 
@@ -593,7 +537,6 @@
         .skill-item:nth-child(3) { animation-delay: 0.3s; }
         .skill-item:nth-child(4) { animation-delay: 0.4s; }
         .skill-item:nth-child(5) { animation-delay: 0.5s; }
-        .skill-item:nth-child(6) { animation-delay: 0.6s; }
 
         @keyframes slideIn {
             to {
@@ -603,19 +546,18 @@
         }
 
         .skill-name {
-            width: 250px;
+            width: 200px;
             color: var(--chrome);
             font-weight: 700;
-            font-size: 1.1rem;
-            font-family: 'Orbitron', sans-serif;
-            letter-spacing: 1px;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
         }
 
         .skill-bar {
             flex: 1;
-            height: 30px;
+            height: 28px;
             background: rgba(0, 212, 255, 0.05);
-            border-radius: 15px;
+            border-radius: 14px;
             overflow: hidden;
             position: relative;
             border: 1px solid rgba(0, 212, 255, 0.2);
@@ -648,6 +590,74 @@
             100% { left: 100%; }
         }
 
+        /* Certifications Section */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .cert-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-left: 4px solid var(--primary);
+            border-radius: 15px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateX(15px) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+            border-left-width: 6px;
+        }
+
+        .cert-card:hover::before {
+            opacity: 1;
+        }
+
+        .cert-card h4 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cert-card p {
+            color: var(--text-dim);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .cert-status {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--primary);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
         /* Contact Section */
         .contact-content {
             text-align: center;
@@ -665,7 +675,7 @@
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 4rem;
             flex-wrap: wrap;
         }
@@ -685,6 +695,9 @@
             text-transform: uppercase;
             position: relative;
             overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
         }
 
         .contact-btn::before {
@@ -702,8 +715,8 @@
         }
 
         .contact-btn:hover::before {
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
         }
 
         .contact-btn:hover {
@@ -726,21 +739,22 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .brand-name { font-size: 5rem; }
-            .about-content, .ongoing-grid { grid-template-columns: 1fr; }
+            .brand-name { font-size: 4.5rem; }
+            .about-content, .skills-grid { grid-template-columns: 1fr; }
             nav ul { gap: 2rem; }
             .projects-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
-            .brand-name { font-size: 3.5rem; letter-spacing: 4px; }
+            .brand-name { font-size: 3rem; letter-spacing: 4px; }
             .subtitle { font-size: 1.2rem; }
             h2 { font-size: 2.5rem; }
             nav { padding: 1rem 1.5rem; }
-            nav ul { gap: 1.5rem; font-size: 0.85rem; }
+            nav ul { gap: 1.2rem; font-size: 0.8rem; }
             section { padding: 8rem 1.5rem 4rem; }
             .contact-links { flex-direction: column; align-items: center; }
-            .skill-name { width: 150px; font-size: 0.95rem; }
+            .skill-name { width: 120px; font-size: 0.9rem; }
+            .skills-grid { gap: 3rem; }
         }
     </style>
 </head>
@@ -757,8 +771,8 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#ongoing">Ongoing</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -781,13 +795,13 @@
                 <div class="about-text">
                     <p>I am a builder and a protector by nature. I'm drawn not to the glamour of cybersecurity, but to its core: a puzzle of cause and effect, where a single detail can be the difference between safety and compromise.</p>
                     
-                    <p>My journey began at 15 with C++. While others sought the right output, I fell in love with the errors. I was captivated by how a missing semicolon could break everything, and the quiet satisfaction of tracing the clues to a fix. </p>
+                    <p>My journey began at 15 with C++. While others sought the right output, I fell in love with the errors. I was captivated by how a missing semicolon could break everything, and the quiet satisfaction of tracing the clues to a fix.</p>
                     
-                    <p>That fascination with finding flaws and understanding systems is my foundation. I moved from theory to practice by building a phishing email to demonstrate how easily trust can be exploited. Seeing credentials appear in my terminal was a pivotal moment. </p>
+                    <p>That fascination with finding flaws and understanding systems is my foundation. I moved from theory to practice by building a phishing email to demonstrate how easily trust can be exploited. Seeing credentials appear in my terminal was a pivotal moment.</p>
                     
                     <p>It was a lesson in human nature and digital safety. It solidified my purpose: to understand these mechanisms not to break things, but to build stronger defences.</p>
 
-                    <P><strong>I cannot sit idle. There is a bug in me, a bug named Purpose, it guides me, it shows me what to do NEXT.</strong></P>
+                    <p><strong>I cannot sit idle. There is a bug in me, a bug named Purpose, it guides me, it shows me what to do NEXT.</strong></p>
                 </div>
                 
                 <div class="glass-box">
@@ -820,7 +834,7 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>#2 CyberSec Styles Math Error Logger</h3>
+                    <h3>#2 CyberSec-Styled Math Error Logger</h3>
                     <p>Where mathematics meets security aesthetics. A tool that transforms error tracking into an art form—helping students navigate their learning journey with military precision and cyberpunk flair.</p>
                     <div class="tech-tags">
                         <span class="tag">JavaScript</span>
@@ -832,15 +846,9 @@
 
                 <div class="project-card">
                     <h3>#3 Guarded by Ro'eh Blog</h3>
-                    <p>Ro'eh is my dream project. A cybersecurity company that provides a comprehensive managed security operations solution that protects organizations against threats by using security experts, advanced tools, and threat intelligence. In short MDR (Managed Detection and Response). I believe in starting small, and i started withthis blog and a few tools</p>
-                    <div class="tech-tags">
-                        <span class="tag">Content Creation</span>
-                        <span class="tag">Research</span>
-                        <span class="tag">Documentation</span>
-                    </div>
-                    <a href="https://guardedbyroeh.blogspot.com/" target="_blank" class="project-link">Visit Blog</a>
-                </div>
-                 <div class="project-card">
+                    <p>Ro'eh is my dream project. A cybersecurity company that provides comprehensive managed security operations solutions protecting organizations against threats using security experts, advanced tools, and threat</p>
+                
+                <div class="project-card">
                     <h3>#4 Built my portable lab</h3>
                     <p>I went from a failed dual-boot attempt that left me with a minimal CLI, to a corrupted drive, and finally to understanding exactly how to create a proper live environment with persistence. It forced me to properly use tools like diskpart for a clean wipe and Rufus with the right settings.</p>
                     <div class="tech-tags">
@@ -849,8 +857,6 @@
                         <span class="tag">Forensic analysis</span>
                     </div>
 
-                <div class="project-card">
-                    <h3>OverTheWire: Bandit levels</h3>
-                    <p>Conquering levels, unraveling puzzles, documenting every keystroke of the journey. Each challenge is a lesson, each solution.
+    
 
 
